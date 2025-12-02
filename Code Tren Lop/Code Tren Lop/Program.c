@@ -38,6 +38,40 @@ void sapXepPhanTuMang()
 	}
 }
 
+void deMoMang2Chieu()
+{
+	//string - string.h
+	char mangKyTu[10] = "ANH";
+	// scanf
+	puts(mangKyTu);
+	// printf
+	gets(mangKyTu);
+	for (int i = 0; i < 10; i++)
+	{
+		scanf(" %c", &mangKyTu);
+	}
+
+	int array[2][3];
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("mang[&d][&d] = ", i, j);
+			scanf("%d", &array[i][j]);
+		}
+	
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				printf("%,", array[i][j]);
+				printf("\n");
+			}
+		}
+	}
+
+}
+
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -52,7 +86,7 @@ void lapChucNang(int chonChucNang)
 			sapXepPhanTuMang();
 			break;
 		case 3:
-			// ham goi chuc nang 3
+			deMoMang2Chieu();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
@@ -73,11 +107,11 @@ int main()
 	{
 		printf("Menu");
 		printf("\n");
-		printf("1. Kiem Tra So Nguyen");
+		printf("1. Kiem tra so nguyen");
 		printf("\n");
 		printf("2. Sap xep phan tu mang");
 		printf("\n");
-		printf("3. TEN chuc nang 3");
+		printf("3. Demo mang 2 chieu ");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
@@ -86,7 +120,3 @@ int main()
 		lapChucNang(chonChucNang);
 	} while (chonChucNang != 0);
 }
-
-
-// GV: AnhTT184
-hi 
