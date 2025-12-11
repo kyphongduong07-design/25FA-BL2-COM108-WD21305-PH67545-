@@ -1,8 +1,9 @@
 ﻿#include <stdio.h>
 #include <string.h>
 
-// 1. Chức năng 1: Thông tin thú cưng
-void thongTinThuCung() {
+// CN1
+void thongTinThuCung() 
+{
     char maThuCung[50];
     char tenThuCung[50];
     int namSinh;
@@ -12,7 +13,7 @@ void thongTinThuCung() {
     scanf("%s", maThuCung);
 
     printf("Nhap ten thu cung: ");
-    scanf("%s", tenThuCung); // Luu y: nhap ten khong co khoang trang de don gian
+    scanf("%s", tenThuCung);
 
     printf("Nhap nam sinh: ");
     scanf("%d", &namSinh);
@@ -20,13 +21,14 @@ void thongTinThuCung() {
     printf("\n--- KET QUA ---\n");
     printf("Thong tin vua nhap:\n -Ma: %s \n -Ten: %s \n -Nam sinh: %d\n", maThuCung, tenThuCung, namSinh);
 
-    // Tinh tuoi (gia su nam hien tai la 2025)
+    // Tinh tuoi
     int tuoi = 2025 - namSinh;
     printf("Tuoi cua thu cung: %d\n", tuoi);
 }
 
-// 2. Chức năng 2: Tính tổng lẻ và kiểm tra chia hết cho 5
-void tinhTong() {
+// CN 2
+void tinhTong() 
+{
     int n, tong = 0;
 
     printf("\n--- TINH TONG ---\n");
@@ -34,32 +36,36 @@ void tinhTong() {
     do {
         printf("Nhap so nguyen duong n (n > 3): ");
         scanf("%d", &n);
-        if (n <= 3) {
+        if (n <= 3) 
+        {
             printf("Vui long nhap n lon hon 3!\n");
         }
     } while (n <= 3);
 
     // Tinh tong cac so le tu 1 den n
-    for (int i = 1; i <= n; i++) {
-        if (i % 2 != 0) {
+    for (int i = 1; i <= n; i++) 
+    {
+        if (i % 2 != 0) 
+        {
             tong += i;
         }
     }
     printf("Tong cac so le tu 1 den %d la: %d\n", n, tong);
 
     // Kiem tra chia het cho 5
-    if (n % 5 == 0) {
-        printf("So %d CO chia het cho 5.\n", n);
+    if (n % 5 == 0) 
+    {
+        printf("So %d chia het cho 5.\n", n);
     }
     else {
         printf("So %d KHONG chia het cho 5.\n", n);
     }
 }
 
-// 3. Chức năng 3: Mảng cân nặng thú cưng
+// CN 3
 void thongTinCuaHang() {
     int soLuong, demDuoiTB = 0;
-    float canNang[100]; // Mang chua toi da 100 phan tu
+    float canNang[100];
     float tongCanNang = 0, trungBinh, thapNhat;
 
     printf("\n--- THONG TIN CUA HANG ---\n");
@@ -67,7 +73,8 @@ void thongTinCuaHang() {
     scanf("%d", &soLuong);
 
     // Nhap mang
-    for (int i = 0; i < soLuong; i++) {
+    for (int i = 0; i < soLuong; i++) 
+    {
         printf("Nhap can nang thu cung thu %d: ", i + 1);
         scanf("%f", &canNang[i]);
         tongCanNang += canNang[i];
@@ -78,15 +85,19 @@ void thongTinCuaHang() {
 
     // Tim can nang thap nhat
     thapNhat = canNang[0];
-    for (int i = 1; i < soLuong; i++) {
-        if (canNang[i] < thapNhat) {
+    for (int i = 1; i < soLuong; i++) 
+    {
+        if (canNang[i] < thapNhat) 
+        {
             thapNhat = canNang[i];
         }
     }
 
     // Dem so thu cung duoi muc trung binh
-    for (int i = 0; i < soLuong; i++) {
-        if (canNang[i] < trungBinh) {
+    for (int i = 0; i < soLuong; i++) 
+    {
+        if (canNang[i] < trungBinh) 
+        {
             demDuoiTB++;
         }
     }
