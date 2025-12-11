@@ -47,7 +47,6 @@ void tinhTrungBinhTongCacSoChiaHetCho3()
 
 	return 0;
 
-
 }
 void sapXepPhanTuMang()
 {

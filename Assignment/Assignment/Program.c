@@ -553,7 +553,7 @@ void sapXepThongTinSinhVien()
         }
 
 
-        printf("Tiep tuc thuc hien CN nay? [1 = Co | Khac = Khong]: ");
+        printf("Tiep tuc thuc hien CN nay? [1 = Co | 0 = Khong]: ");
         if (scanf("%d", &chon) != 1) { while (getchar() != '\n'); chon = 0; }
         printf("\n");
     } while (chon == 1);
@@ -619,7 +619,7 @@ void xayDungGameFPOLY()
         }
         printf("======================================\n");
 
-        printf("Tiep tuc thuc hien CN nay? [1 = Co | Khac = Khong]: ");
+        printf("Tiep tuc thuc hien CN nay? [1 = Co | 0 = Khong]: ");
         if (scanf("%d", &chon) != 1) { while (getchar() != '\n'); chon = 0; }
         printf("\n");
     } while (chon == 1);
@@ -739,7 +739,7 @@ void tinhToanPhanSo()
 
         printf("--------------------------------------\n");
 
-        printf("Tiep tuc thuc hien CN nay? [1 = Co | Khac = Khong]: ");
+        printf("Tiep tuc thuc hien CN nay? [1 = Co | 0 = Khong]: ");
         if (scanf("%d", &chon) != 1) { while (getchar() != '\n'); chon = 0; }
         printf("\n");
     } while (chon == 1);
@@ -816,3 +816,4 @@ int main()
     } while (chon != 0);
     return 0;
 }
+
